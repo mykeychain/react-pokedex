@@ -1,9 +1,18 @@
 import Pokecard from "./Pokecard.js";
+import "./Pokedex.css";
 
 function Pokedex(props) {
+
+  const {characters} = props;
+
   return (
-    <div className="container">
-    { props.characters.map(c => Pokecard(c)) }
+    <div className="Pokedex">
+      { characters.map(c => 
+        (<Pokecard 
+          id={c.id} 
+          name={c.name} 
+          type={c.type}
+        />)) }
     </div>
   );
 }
@@ -20,4 +29,5 @@ Pokedex.defaultProps = {
     {id: 133, name: 'Eevee',      type: 'normal',   base_experience: 65}
   ]
 }
+
 export default Pokedex;

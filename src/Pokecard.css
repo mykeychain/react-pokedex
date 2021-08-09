@@ -1,0 +1,11 @@
+.Pokecard {
+    text-align: center;
+    background: lightgrey;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Pokecard-name {
+    color: blue;
+}

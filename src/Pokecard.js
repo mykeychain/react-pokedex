@@ -1,14 +1,14 @@
-function Pokecard(props) {
+import "./Pokecard.css";
 
-  const { name, id, type } = props;
+function Pokecard({name, id, type}) {
 
   const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 
   return (
-  <div className="pokemon">
-    <h2 className="blue">{name}</h2>
-    <img className="image" src={url} alt={name}/>
-    <p>{type}</p>
+  <div className="Pokecard">
+    <h2 className="Pokecard-name">{name}</h2>
+    <img className="Pokecard-image" src={url} alt={name}/>
+    <p>Type: {type}</p>
   </div>
   );
 }
